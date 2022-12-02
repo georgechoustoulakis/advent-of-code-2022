@@ -1,4 +1,6 @@
-from utils import *
+def read_file(name):
+    with open(name) as f:
+        return f.readlines()
 
 
 def template():
