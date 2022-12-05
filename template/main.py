@@ -8,9 +8,9 @@ def read_file(name) -> List[AnyStr]:
 
 def template():
     lines = read_file('example.txt')
-    for line in lines:
-        trimmed = line.replace('\n', '')
-        print(trimmed)
+    trimmed = [line.replace('\n', '') for line in lines]
+    for line in trimmed:
+        print(line)
 
 
 if __name__ == '__main__':
