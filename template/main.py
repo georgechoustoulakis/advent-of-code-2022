@@ -3,13 +3,12 @@ from typing import List, AnyStr
 
 def read_file(name) -> List[AnyStr]:
     with open(name) as f:
-        return f.readlines()
+        return [line.replace('\n', '') for line in f.readlines()]
 
 
 def template():
     lines = read_file('example.txt')
-    trimmed = [line.replace('\n', '') for line in lines]
-    for line in trimmed:
+    for line in lines:
         print(line)
 
 
